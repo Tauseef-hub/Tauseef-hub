@@ -1,57 +1,31 @@
-# 👋 Hi, I'm Tauseef Mohammed Aoun
+# Tauseef Mohammed Aoun
 
-**Data Scientist** building production-grade analytics systems | Monash University Master's candidate (85.80% HD) | 14+ months commercial experience
+Final-year Master of Data Science student at Monash University (graduating
+December 2026). I build data systems that ship — ETL pipelines, ML models,
+and APIs that run in production, documented honestly.
 
-🔗 **Live Project**: [Australian Retail Intelligence System](https://australian-retail-intelligence-1.onrender.com) – Deployed ML forecasting platform processing 42 years of ABS data
+## Featured work
 
----
+**[Australian Retail Intelligence](https://github.com/Tauseef-hub/Australian-retail-intelligence)** —
+End-to-end forecasting platform on 42 years of ABS retail data: ETL pipeline
+(342K raw → 93K+ clean records), 192 Prophet models producing 2,304 forecasts
+at <10% average MAPE, served live via FastAPI with a Power BI dashboard.
+→ [Live API](https://australian-retail-intelligence-1.onrender.com)
 
-## 📊 Featured Projects
+**[Melbourne Housing Prediction](https://github.com/Tauseef-hub/Melbourne-housing-prediction)** —
+Random Forest across 20,993 properties: 0.80 R², average error ~20% of median
+price, 62% improvement over the linear baseline.
 
-### 🚀 [Australian Retail Intelligence](https://github.com/Tauseef-hub/Australian-retail-intelligence)
-Production-grade retail analytics system with Prophet ML forecasting (<10% MAPE), FastAPI deployment (99.9% uptime), and Power BI dashboards. Processes 342K records across 42 years of Australian Bureau of Statistics data.
+**[Victorian Transport Analysis](https://github.com/Tauseef-hub/victorian-transport-analysis)** —
+Patronage analysis of 222 Melbourne metro stations: 64% of demand concentrated
+in six peak hours; tiered service recommendations.
 
-**Tech**: Python, Prophet ML, FastAPI, PostgreSQL, Power BI  
-**Impact**: 96-week forecasts with <10% error, 3.5% growth projection for 2025 Australian retail
+## Stack
+Python (pandas, scikit-learn, Prophet) · SQL / PostgreSQL · Apache Spark ·
+FastAPI · Power BI · Git
 
-### 🏠 [Melbourne Housing Prediction](https://github.com/Tauseef-hub/Melbourne-housing-prediction)  
-Machine learning model predicting property prices with 80% accuracy (R²=0.799) across 20,993 properties.
+**Currently:** Deep Learning + industry capstone at Monash; building a
+real-time market-data engineering side project (private).
 
-**Tech**: Python, Random Forest, Feature Engineering  
-**Impact**: MAE $172K for first-home buyer insights
-
-### 🚆 [Victorian Transport Analysis](https://github.com/Tauseef-hub/victorian-transport-analysis)
-Analysis of Melbourne metro patronage patterns identifying peak congestion and optimization opportunities.
-
-**Tech**: Python, Pandas, Data Visualization  
-**Impact**: Actionable insights for Transport Victoria operations
-
----
-
-## 🛠️ Tech Stack
-
-**Languages**: Python • SQL • R  
-**ML/AI**: Scikit-learn • Prophet • TensorFlow  
-**Data Tools**: Pandas • NumPy • Power BI • Tableau  
-**Development**: FastAPI • PostgreSQL • Git • Jupyter  
-**Deployment**: Render • Docker
-
----
-
-## 💼 Experience
-
-**QTek Digital** – Sales Operations Lead (Nov 2023 - Jan 2025)  
-- Reduced reporting time 65% through Python automation  
-- Improved forecast accuracy 40% using ML models
-
-**Viva Energy Retail** – Reddy Express (Jun 2025 - Present)  
-- Cut inventory waste 25% through demand forecasting  
-- 98% transaction accuracy (400+ daily POS transactions)
-
----
-
-## 📫 Let's Connect
-
-📧 tauseefmohammedaoun@gmail.com  
-💼 [LinkedIn](https://linkedin.com/in/tauseef-mohammed-aoun-a0600931a)  
-🌐 [Live Demo](https://australian-retail-intelligence-1.onrender.com)
+📫 [linkedin.com/in/tauseef-aoun](https://www.linkedin.com/in/tauseef-aoun) ·
+tauseefmohammedaoun@gmail.com
