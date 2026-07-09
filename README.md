@@ -17,8 +17,8 @@
 
 <br><br>
 
-[![Live production API](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faustralian-retail-intelligence-1.onrender.com%2F&query=%24.data_coverage.historical_records&label=production%20API&color=2ea44f&cacheSeconds=1800)](https://australian-retail-intelligence-1.onrender.com)
-[![Live forecasts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faustralian-retail-intelligence-1.onrender.com%2F&query=%24.data_coverage.forecasts&label=live%20forecasts&color=0969da&cacheSeconds=1800)](https://australian-retail-intelligence-1.onrender.com/docs)
+[![Live production API](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faustralian-retail-intelligence-1.onrender.com%2F&query=%24.data_coverage.historical_records&label=production%20API&color=2ea44f&cacheSeconds=300)](https://australian-retail-intelligence-1.onrender.com)
+[![Live forecasts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faustralian-retail-intelligence-1.onrender.com%2F&query=%24.data_coverage.forecasts&label=live%20forecasts&color=0969da&cacheSeconds=300)](https://australian-retail-intelligence-1.onrender.com/docs)
 
 <sub>↑ these values are fetched from my deployed FastAPI service each time this page loads — not a screenshot, a running system</sub>
 
