@@ -18,7 +18,7 @@ price, 62% improvement over the linear baseline.
 
 **[Victorian Transport Analysis](https://github.com/Tauseef-hub/victorian-transport-analysis)** —
 Patronage analysis of 222 Melbourne metro stations: 64% of demand concentrated
-in six peak hours; tiered service recommendations.
+in the AM and PM peaks; tiered service recommendations.
 
 ## Stack
 Python (pandas, scikit-learn, Prophet) · SQL / PostgreSQL · Apache Spark ·
