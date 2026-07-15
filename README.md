@@ -34,13 +34,13 @@ Final-year **Master of Data Science** student at Monash University, graduating D
 |---|---|---|---|
 | **[Australian Retail Intelligence](https://github.com/Tauseef-hub/Australian-retail-intelligence)** | End-to-end forecasting platform on 42 years of ABS retail data — ETL, 192 Prophet models, FastAPI, Power BI | 342,747 raw → 93,578 clean records (live count in the badge above); 2,304 forecasts at <10% avg MAPE | [Live API](https://australian-retail-intelligence-1.onrender.com) · [Docs](https://australian-retail-intelligence-1.onrender.com/docs) |
 | **[Melbourne Housing Prediction](https://github.com/Tauseef-hub/Melbourne-housing-prediction)** | Random Forest price model with engineered features, benchmarked against a linear baseline | 20,993 properties · R² 0.799 · mean error ≈ 20% of median price · +62% over baseline | [Repo](https://github.com/Tauseef-hub/Melbourne-housing-prediction) |
-| **[Victorian Transport Analysis](https://github.com/Tauseef-hub/victorian-transport-analysis)** | Patronage analysis of Melbourne's 222 metro train stations (FY 2024-25, data.vic.gov.au) | 64% of annual demand concentrated in six peak hours; tiered service recommendations | [Repo](https://github.com/Tauseef-hub/victorian-transport-analysis) |
+| **[Victorian Transport Analysis](https://github.com/Tauseef-hub/victorian-transport-analysis)** | Patronage analysis of Melbourne's 222 metro train stations (FY 2024-25, data.vic.gov.au) | 64% of weekday demand concentrated in the AM and PM peaks; tiered service recommendations | [Repo](https://github.com/Tauseef-hub/victorian-transport-analysis) |
 
 ## How I work
 
 - **Artifacts over claims** — if a number isn't reproducible from a repo or a live endpoint, I don't publish it
 - **Deployed beats demo** — the flagship above is answering HTTP requests right now
-- **Honest metrics** — my best forecasting model runs at 2.09% MAPE, my worst at 22.56%; both are in the README
+- **Honest metrics** — across 192 backtested models the best runs at 0.42% MAPE and the worst at 58.48% (median 5.11%); the full spread ships in the repo's README and `results/metrics.json`
 
 ## Stack
 
