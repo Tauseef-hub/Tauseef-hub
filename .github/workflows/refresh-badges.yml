@@ -1,0 +1,58 @@
+name: refresh-badges
+
+# Regenerates the two live-metric badge SVGs in assets/ from the deployed API.
+# The README references these committed SVGs (not shields.io directly), so the
+# badges can never render grey/"inaccessible" at page-load time even if Render
+# is asleep or shields.io hiccups — the worst case is a slightly stale number.
+on:
+  schedule:
+    - cron: '17 * * * *'   # hourly at :17 (off-peak minute = more reliable than :00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-badges
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      API_BADGE: 'https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faustralian-retail-intelligence-1.onrender.com%2F&query=%24.data_coverage.historical_records&label=production%20API&color=2ea44f&cacheSeconds=300'
+      FC_BADGE:  'https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faustralian-retail-intelligence-1.onrender.com%2F&query=%24.data_coverage.forecasts&label=live%20forecasts&color=0969da&cacheSeconds=300'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Warm the API (absorb Render cold start before rendering badges)
+        run: |
+          curl -fsS --max-time 90 --retry 5 --retry-delay 15 --retry-all-errors \
+            -o /dev/null https://australian-retail-intelligence-1.onrender.com/health || true
+
+      - name: Render badge SVGs (keep last-good on any failure)
+        run: |
+          mkdir -p assets
+          fetch() {  # $1=url  $2=output-file
+            tmp="$(mktemp)"
+            if curl -fsS --max-time 30 "$1" -o "$tmp" \
+               && ! grep -qiE 'inaccessible|invalid|no response' "$tmp"; then
+              mv "$tmp" "$2"; echo "updated $2"
+            else
+              rm -f "$tmp"; echo "kept previous $2 (fetch failed or badge had no value)"
+            fi
+          }
+          fetch "$API_BADGE" assets/badge-api.svg
+          fetch "$FC_BADGE"  assets/badge-forecasts.svg
+
+      - name: Commit only if a value actually changed
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/badge-api.svg assets/badge-forecasts.svg
+          if git diff --cached --quiet; then
+            echo "no badge changes — nothing to commit"
+          else
+            git commit -m 'chore: refresh live badges [skip ci]'
+            git push
+          fi
